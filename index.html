@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI副業ハック｜AIで月10万円を稼ぐ実践ガイド</title>
+  <meta name="description" content="AI副業の始め方・稼ぎ方を徹底解説。ChatGPT・Claude・画像生成AIを使った副業で月10万円を目指すロードマップ、ツール比較、収益化のリアルを発信。">
+  <meta name="keywords" content="AI副業,ChatGPT 副業,AI 稼ぐ,Claude 副業,画像生成AI 副業,副業 始め方">
+  <meta name="author" content="AI副業ハック">
+  <link rel="canonical" href="https://ai-fukugyou-hack.vercel.app/">
+
+  <!-- OGP -->
+  <meta property="og:title" content="AI副業ハック｜AIで月10万円を稼ぐ実践ガイド">
+  <meta property="og:description" content="AI副業の始め方・稼ぎ方を徹底解説。実践者のリアルな体験談と収益データを公開中。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ai-fukugyou-hack.vercel.app/">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <!-- Google AdSense (審査通過後にIDを入れる) -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AI副業ハック",
+    "url": "https://ai-fukugyou-hack.vercel.app/",
+    "description": "AIで月10万円を稼ぐ実践ガイド",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ai-fukugyou-hack.vercel.app/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-bg: #0F0F13;
+      --color-bg-card: #1A1A22;
+      --color-bg-elevated: #22222E;
+      --color-surface: #2A2A38;
+      --color-text: #F0F0F5;
+      --color-text-secondary: #A0A0B8;
+      --color-text-muted: #6E6E88;
+      --color-primary: #7C5CFC;
+      --color-primary-light: #9B7FFF;
+      --color-primary-glow: rgba(124, 92, 252, 0.15);
+      --color-accent: #00E5A0;
+      --color-accent-glow: rgba(0, 229, 160, 0.12);
+      --color-yellow: #FFCB47;
+      --color-pink: #FF6B9D;
+      --color-blue: #4DACFF;
+      --color-border: rgba(255,255,255,0.06);
+      --color-border-hover: rgba(255,255,255,0.12);
+      --color-tag-bg: rgba(124, 92, 252, 0.12);
+
+      --font-heading: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+      --font-body: 'Noto Sans JP', sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-xl: 32px;
+
+      --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
+      --shadow-hover: 0 8px 40px rgba(124, 92, 252, 0.15);
+
+      --max-width: 1200px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-text); line-height: 1.8; font-size: 16px; }
+    a { color: var(--color-primary-light); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--color-accent); }
+    img { max-width: 100%; display: block; }
+
+    /* ===== Header ===== */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15, 15, 19, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .header-inner {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 24px;
+      height: 64px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .site-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem;
+      color: var(--color-text);
+    }
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; color: white; font-weight: 800;
+    }
+    .site-nav { display: flex; gap: 4px; align-items: center; }
+    .site-nav a {
+      padding: 7px 14px; border-radius: 8px;
+      color: var(--color-text-secondary); font-size: 0.85rem; font-weight: 500;
+      transition: all 0.2s;
+    }
+    .site-nav a:hover { background: var(--color-bg-elevated); color: var(--color-text); }
+
+    /* ===== Hero ===== */
+    .hero {
+      max-width: var(--max-width); margin: 0 auto; padding: 72px 24px 56px;
+      position: relative;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 400px;
+      background: radial-gradient(ellipse, var(--color-primary-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--color-tag-bg); color: var(--color-primary-light);
+      padding: 6px 16px; border-radius: 100px;
+      font-size: 0.82rem; font-weight: 700;
+      margin-bottom: 20px; position: relative;
+      animation: fadeInUp 0.5s ease-out;
+    }
+    .hero-label .pulse {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--color-accent);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.5); }
+    }
+    .hero h1 {
+      font-family: var(--font-heading); font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+      font-weight: 800; line-height: 1.25; letter-spacing: -0.03em;
+      margin-bottom: 18px; position: relative;
+      animation: fadeInUp 0.5s ease-out 0.1s both;
+    }
+    .hero h1 .gradient {
+      background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero-desc {
+      font-size: 1.08rem; color: var(--color-text-secondary);
+      max-width: 600px; line-height: 1.9; position: relative;
+      animation: fadeInUp 0.5s ease-out 0.2s both;
+    }
+
+    /* ===== Stats Bar ===== */
+    .stats-bar {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 24px 48px;
+    }
+    .stats-grid {
+      display: flex; gap: 16px; flex-wrap: wrap;
+    }
+    .stat-chip {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--color-bg-card); border: 1px solid var(--color-border);
+      padding: 12px 20px; border-radius: 100px;
+      animation: fadeInUp 0.4s ease-out both;
+    }
+    .stat-chip:nth-child(1) { animation-delay: 0.1s; }
+    .stat-chip:nth-child(2) { animation-delay: 0.15s; }
+    .stat-chip:nth-child(3) { animation-delay: 0.2s; }
+    .stat-number {
+      font-family: var(--font-heading); font-weight: 800;
+      font-size: 1.3rem; color: var(--color-accent);
+    }
+    .stat-label { font-size: 0.82rem; color: var(--color-text-muted); }
+
+    /* ===== Category Tabs ===== */
+    .categories {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 24px 32px;
+    }
+    .category-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+    .category-tab {
+      padding: 8px 20px; border-radius: 100px;
+      border: 1.5px solid var(--color-border);
+      background: transparent; color: var(--color-text-secondary);
+      font-size: 0.85rem; font-weight: 500; cursor: pointer;
+      transition: all 0.25s; font-family: var(--font-body);
+    }
+    .category-tab:hover { border-color: var(--color-primary); color: var(--color-primary-light); }
+    .category-tab.active {
+      background: var(--color-primary); border-color: var(--color-primary);
+      color: white;
+    }
+
+    /* ===== Articles Grid ===== */
+    .articles-section {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 24px 64px;
+    }
+    .section-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 28px;
+    }
+    .section-title {
+      font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800;
+    }
+    .articles-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+    }
+    .article-card {
+      background: var(--color-bg-card); border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border); overflow: hidden;
+      transition: all 0.3s ease; cursor: pointer;
+      animation: fadeInUp 0.5s ease-out both;
+    }
+    .article-card:hover {
+      transform: translateY(-6px); box-shadow: var(--shadow-hover);
+      border-color: var(--color-border-hover);
+    }
+    .article-card:nth-child(1) { animation-delay: 0.05s; }
+    .article-card:nth-child(2) { animation-delay: 0.1s; }
+    .article-card:nth-child(3) { animation-delay: 0.15s; }
+    .article-card:nth-child(4) { animation-delay: 0.2s; }
+    .article-card:nth-child(5) { animation-delay: 0.25s; }
+    .article-card:nth-child(6) { animation-delay: 0.3s; }
+
+    .card-visual {
+      width: 100%; aspect-ratio: 16/9;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .card-visual .bg-gradient {
+      position: absolute; inset: 0;
+    }
+    .card-visual .emoji-icon {
+      font-size: 3.2rem; position: relative; z-index: 1;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+    .card-badge {
+      position: absolute; top: 12px; left: 12px;
+      padding: 4px 12px; border-radius: 100px;
+      font-size: 0.72rem; font-weight: 700;
+      backdrop-filter: blur(8px); z-index: 2;
+    }
+    .badge-beginner { background: rgba(0, 229, 160, 0.2); color: var(--color-accent); }
+    .badge-intermediate { background: rgba(124, 92, 252, 0.2); color: var(--color-primary-light); }
+    .badge-advanced { background: rgba(255, 107, 157, 0.2); color: var(--color-pink); }
+    .badge-hot { background: rgba(255, 203, 71, 0.2); color: var(--color-yellow); }
+
+    .card-body { padding: 18px 22px 22px; }
+    .card-meta {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 8px; font-size: 0.78rem; color: var(--color-text-muted);
+    }
+    .card-title {
+      font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700;
+      line-height: 1.5; margin-bottom: 6px; color: var(--color-text);
+    }
+    .card-excerpt {
+      font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.7;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .card-tags { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
+    .card-tag {
+      padding: 3px 10px; background: var(--color-tag-bg); border-radius: 100px;
+      font-size: 0.72rem; color: var(--color-primary-light); font-weight: 500;
+    }
+
+    /* ===== Ad Placeholder ===== */
+    .ad-placeholder {
+      max-width: 780px; margin: 0 auto 48px; padding: 36px 24px;
+      background: var(--color-bg-card); border: 1.5px dashed var(--color-border);
+      border-radius: var(--radius-md); text-align: center;
+      color: var(--color-text-muted); font-size: 0.82rem;
+    }
+
+    /* ===== Roadmap Section ===== */
+    .roadmap-section {
+      background: linear-gradient(180deg, var(--color-bg-elevated) 0%, var(--color-bg) 100%);
+      padding: 72px 24px;
+    }
+    .roadmap-inner { max-width: var(--max-width); margin: 0 auto; }
+    .roadmap-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px; margin-top: 32px;
+    }
+    .roadmap-card {
+      background: var(--color-bg-card); border-radius: var(--radius-lg);
+      padding: 28px; border: 1px solid var(--color-border);
+      transition: all 0.3s; position: relative; overflow: hidden;
+    }
+    .roadmap-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    }
+    .roadmap-card.step1::before { background: var(--color-accent); }
+    .roadmap-card.step2::before { background: var(--color-primary-light); }
+    .roadmap-card.step3::before { background: var(--color-yellow); }
+    .roadmap-card.step4::before { background: var(--color-pink); }
+
+    .roadmap-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-card); }
+    .step-number {
+      font-family: var(--font-heading); font-weight: 800; font-size: 2.5rem;
+      line-height: 1; margin-bottom: 12px;
+    }
+    .step1 .step-number { color: var(--color-accent); }
+    .step2 .step-number { color: var(--color-primary-light); }
+    .step3 .step-number { color: var(--color-yellow); }
+    .step4 .step-number { color: var(--color-pink); }
+
+    .roadmap-card h3 {
+      font-family: var(--font-heading); font-weight: 700;
+      font-size: 1.05rem; margin-bottom: 8px;
+    }
+    .roadmap-card p { font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.7; }
+    .roadmap-card .earning {
+      margin-top: 14px; padding: 6px 14px; border-radius: 100px;
+      display: inline-block; font-size: 0.8rem; font-weight: 700;
+    }
+    .step1 .earning { background: var(--color-accent-glow); color: var(--color-accent); }
+    .step2 .earning { background: var(--color-primary-glow); color: var(--color-primary-light); }
+    .step3 .earning { background: rgba(255,203,71,0.12); color: var(--color-yellow); }
+    .step4 .earning { background: rgba(255,107,157,0.12); color: var(--color-pink); }
+
+    /* ===== CTA ===== */
+    .cta-section {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 24px 72px;
+    }
+    .cta-box {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #4A2FCC 50%, var(--color-pink) 100%);
+      border-radius: var(--radius-xl); padding: 56px 48px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-box::before {
+      content: ''; position: absolute; top: -100px; right: -100px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cta-box h2 {
+      font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800;
+      margin-bottom: 12px; color: white; position: relative;
+    }
+    .cta-box p { color: rgba(255,255,255,0.8); margin-bottom: 28px; position: relative; }
+    .cta-button {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 36px; background: white; color: var(--color-primary);
+      font-weight: 700; font-size: 1rem; border-radius: 100px;
+      transition: all 0.2s; position: relative;
+    }
+    .cta-button:hover { transform: scale(1.05); box-shadow: 0 8px 24px rgba(0,0,0,0.3); color: var(--color-primary); }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      background: var(--color-bg-card); border-top: 1px solid var(--color-border);
+      padding: 56px 24px 28px;
+    }
+    .footer-inner { max-width: var(--max-width); margin: 0 auto; }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px; margin-bottom: 40px;
+    }
+    .footer-brand {
+      font-family: var(--font-heading); font-weight: 800; font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+    .footer-desc { font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.7; }
+    .footer-heading { font-weight: 700; font-size: 0.85rem; margin-bottom: 14px; color: var(--color-text); }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { color: var(--color-text-muted); font-size: 0.82rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--color-primary-light); }
+    .footer-bottom {
+      border-top: 1px solid var(--color-border); padding-top: 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.78rem; color: var(--color-text-muted);
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .hero { padding: 48px 16px 40px; }
+      .hero h1 { font-size: 2rem; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .roadmap-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .stats-grid { gap: 10px; }
+      .stat-chip { padding: 10px 16px; }
+      .cta-box { padding: 40px 24px; }
+    }
+    @media (max-width: 480px) {
+      .site-nav { display: none; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .roadmap-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">
+        <div class="logo-mark">AI</div>
+        <span>AI副業ハック</span>
+      </a>
+      <nav class="site-nav">
+        <a href="#articles">記事一覧</a>
+        <a href="#roadmap">ロードマップ</a>
+        <a href="/about.html">運営者</a>
+        <a href="/contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-label"><span class="pulse"></span> 2025年最新版</div>
+    <h1>AIで<span class="gradient">月10万円</span>を稼ぐ<br>副業の教科書</h1>
+    <p class="hero-desc">
+      ChatGPT・Claude・Midjourney…AIツールを使った副業の始め方から収益化まで。
+      才能じゃない、「仕組み」で稼ぐ方法を実践者が徹底解説。
+    </p>
+  </section>
+
+  <section class="stats-bar">
+    <div class="stats-grid">
+      <div class="stat-chip">
+        <span class="stat-number">50+</span>
+        <span class="stat-label">実践記事</span>
+      </div>
+      <div class="stat-chip">
+        <span class="stat-number">10万円</span>
+        <span class="stat-label">目標月収</span>
+      </div>
+      <div class="stat-chip">
+        <span class="stat-number">0円</span>
+        <span class="stat-label">初期投資</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories">
+    <div class="category-tabs">
+      <button class="category-tab active" data-category="all">すべて</button>
+      <button class="category-tab" data-category="start">始め方</button>
+      <button class="category-tab" data-category="tool">AIツール</button>
+      <button class="category-tab" data-category="writing">ライティング</button>
+      <button class="category-tab" data-category="image">画像生成</button>
+      <button class="category-tab" data-category="code">コード・開発</button>
+      <button class="category-tab" data-category="monetize">収益化</button>
+    </div>
+  </section>
+
+  <section class="articles-section" id="articles">
+    <div class="section-header">
+      <h2 class="section-title">最新の記事</h2>
+    </div>
+    <div class="articles-grid" id="articles-grid"></div>
+  </section>
+
+  <div class="ad-placeholder">📢 広告スペース（AdSense審査通過後に自動表示）</div>
+
+  <section class="roadmap-section" id="roadmap">
+    <div class="roadmap-inner">
+      <h2 class="section-title">AI副業ロードマップ</h2>
+      <p style="color: var(--color-text-secondary); margin-top: 8px;">ゼロから月10万円までの4ステップ</p>
+      <div class="roadmap-grid">
+        <div class="roadmap-card step1">
+          <div class="step-number">01</div>
+          <h3>AIツールに慣れる</h3>
+          <p>ChatGPT・Claudeの基本操作を覚える。まずは自分の仕事や日常でAIを使い倒す。</p>
+          <span class="earning">目標：0円（準備期間）</span>
+        </div>
+        <div class="roadmap-card step2">
+          <div class="step-number">02</div>
+          <h3>小さく稼ぐ体験をする</h3>
+          <p>クラウドソーシングでAIライティング案件を受注。実績と自信をつける。</p>
+          <span class="earning">目標：月1〜3万円</span>
+        </div>
+        <div class="roadmap-card step3">
+          <div class="step-number">03</div>
+          <h3>自分の「型」を作る</h3>
+          <p>得意ジャンル×AIで効率的に量産できる仕組みを構築。ブログ・SNS・noteを育てる。</p>
+          <span class="earning">目標：月3〜5万円</span>
+        </div>
+        <div class="roadmap-card step4">
+          <div class="step-number">04</div>
+          <h3>仕組みをスケールする</h3>
+          <p>コンテンツ販売・ツール開発・コンサルなど、ストック型の収益源を作る。</p>
+          <span class="earning">目標：月10万円+</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-box">
+      <h2>最新のAI副業ノウハウをXで発信中</h2>
+      <p>ツール速報・収益データ・裏技を毎日シェアしています</p>
+      <a href="https://twitter.com/your_handle" class="cta-button" target="_blank" rel="noopener">
+        Xをフォローする →
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">AI副業ハック</div>
+          <p class="footer-desc">AIを使った副業の始め方・稼ぎ方を実践者目線で徹底解説するメディア。才能じゃない、仕組みで稼ぐ。</p>
+        </div>
+        <div>
+          <div class="footer-heading">カテゴリー</div>
+          <ul class="footer-links">
+            <li><a href="#">始め方ガイド</a></li>
+            <li><a href="#">AIツール比較</a></li>
+            <li><a href="#">ライティング副業</a></li>
+            <li><a href="#">画像生成副業</a></li>
+            <li><a href="#">コード・開発</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">人気記事</div>
+          <ul class="footer-links">
+            <li><a href="#">AI副業の始め方</a></li>
+            <li><a href="#">ChatGPT vs Claude比較</a></li>
+            <li><a href="#">月10万円ロードマップ</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">サイト情報</div>
+          <ul class="footer-links">
+            <li><a href="/about.html">運営者情報</a></li>
+            <li><a href="/contact.html">お問い合わせ</a></li>
+            <li><a href="/privacy.html">プライバシーポリシー</a></li>
+            <li><a href="/disclaimer.html">免責事項</a></li>
+            <li><a href="/sitemap.xml">サイトマップ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 AI副業ハック All Rights Reserved.</span>
+        <span>運営: わたる</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const articles = [
+      {
+        id: 1, slug: "ai-side-business-start-guide",
+        title: "【完全初心者OK】AI副業の始め方ガイド2025｜月10万円を目指すロードマップ",
+        excerpt: "AI副業って何から始めればいい？必要なツール・スキル・最初の一歩を完全解説。ゼロから月10万を目指すリアルな道筋。",
+        category: "start", categoryLabel: "始め方", level: "beginner", levelLabel: "初心者向け",
+        date: "2025-04-20", readTime: "15分",
+        tags: ["AI副業", "始め方", "ロードマップ"],
+        icon: "🚀", gradient: "linear-gradient(135deg, #00E5A0 0%, #00B4D8 100%)"
+      },
+      {
+        id: 2, slug: "chatgpt-vs-claude-comparison",
+        title: "ChatGPT vs Claude完全比較｜副業で使うならどっち？用途別おすすめガイド",
+        excerpt: "文章生成、コード、分析…用途別にChatGPTとClaudeを徹底比較。副業で最大限活用するための使い分け術。",
+        category: "tool", categoryLabel: "AIツール", level: "beginner", levelLabel: "初心者向け",
+        date: "2025-04-18", readTime: "12分",
+        tags: ["ChatGPT", "Claude", "比較"],
+        icon: "⚔️", gradient: "linear-gradient(135deg, #7C5CFC 0%, #FF6B9D 100%)"
+      },
+      {
+        id: 3, slug: "ai-writing-side-job",
+        title: "AIライティング副業で月5万円｜未経験からの案件獲得テンプレート公開",
+        excerpt: "クラウドソーシングでAIライティング案件を獲得する方法。プロフィール文面・提案文テンプレート付き。",
+        category: "writing", categoryLabel: "ライティング", level: "beginner", levelLabel: "初心者向け",
+        date: "2025-04-15", readTime: "10分",
+        tags: ["ライティング", "クラウドソーシング", "月5万"],
+        icon: "✍️", gradient: "linear-gradient(135deg, #4DACFF 0%, #7C5CFC 100%)"
+      },
+      {
+        id: 4, slug: "midjourney-stock-photo-business",
+        title: "Midjourney×ストックフォトで不労所得｜AI画像で月3万円を自動化する方法",
+        excerpt: "AI画像生成でストックフォトサイトに出品。売れるプロンプトのコツと収益化の全手順を公開。",
+        category: "image", categoryLabel: "画像生成", level: "intermediate", levelLabel: "中級者向け",
+        date: "2025-04-12", readTime: "11分",
+        tags: ["Midjourney", "ストックフォト", "不労所得"],
+        icon: "🎨", gradient: "linear-gradient(135deg, #FFCB47 0%, #FF6B9D 100%)"
+      },
+      {
+        id: 5, slug: "claude-code-tool-development",
+        title: "Claude Codeで副業ツールを開発して月10万円稼ぐ具体的な方法",
+        excerpt: "プログラミング未経験でもOK。Claude Codeを使ったWebツール開発と、有料化・収益化までの全ステップ。",
+        category: "code", categoryLabel: "コード・開発", level: "intermediate", levelLabel: "中級者向け",
+        date: "2025-04-08", readTime: "14分",
+        tags: ["Claude Code", "ツール開発", "月10万"],
+        icon: "💻", gradient: "linear-gradient(135deg, #7C5CFC 0%, #00E5A0 100%)"
+      },
+      {
+        id: 6, slug: "note-content-sales-strategy",
+        title: "noteで有料記事を売る｜AI×専門知識のコンテンツ販売で月収を2倍にする戦略",
+        excerpt: "自分の専門知識をAIで記事にしてnoteで販売。価格設定・集客・リピーター獲得のノウハウを徹底解説。",
+        category: "monetize", categoryLabel: "収益化", level: "advanced", levelLabel: "上級者向け",
+        date: "2025-04-05", readTime: "13分",
+        tags: ["note", "コンテンツ販売", "収益化"],
+        icon: "💰", gradient: "linear-gradient(135deg, #FF6B9D 0%, #FFCB47 100%)"
+      }
+    ];
+
+    function getBadgeClass(level) {
+      const map = { beginner: 'badge-beginner', intermediate: 'badge-intermediate', advanced: 'badge-advanced' };
+      return map[level] || 'badge-beginner';
+    }
+
+    function renderArticles(filter = 'all') {
+      const grid = document.getElementById('articles-grid');
+      const filtered = filter === 'all' ? articles : articles.filter(a => a.category === filter);
+      grid.innerHTML = filtered.map(article => `
+        <article class="article-card" onclick="location.href='/posts/${article.slug}.html'">
+          <div class="card-visual">
+            <div class="bg-gradient" style="background: ${article.gradient}"></div>
+            <span class="card-badge ${getBadgeClass(article.level)}">${article.levelLabel}</span>
+            <span class="emoji-icon">${article.icon}</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>${article.date}</span>
+              <span>⏱ ${article.readTime}</span>
+              <span style="color:var(--color-primary-light);font-weight:600">${article.categoryLabel}</span>
+            </div>
+            <h3 class="card-title">${article.title}</h3>
+            <p class="card-excerpt">${article.excerpt}</p>
+            <div class="card-tags">
+              ${article.tags.map(t => `<span class="card-tag">#${t}</span>`).join('')}
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    document.querySelectorAll('.category-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        renderArticles(tab.dataset.category);
+      });
+    });
+
+    renderArticles();
+  </script>
+</body>
+</html>

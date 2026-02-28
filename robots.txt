@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://watarublog2.vercel.app/sitemap.xml

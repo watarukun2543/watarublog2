@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GRPH7YTQB8"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GRPH7YTQB8');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8194603975145671" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+<title>AIで本業を時短して副業時間を作る｜自動化ワークフロー構築ガイド｜AI副業ハック</title>
+<meta name="description" content="Zapier×ChatGPT×Claudeで業務を自動化。浮いた時間で副業する方法。">
+<style>
+:root{--bg:#FFFCF7;--card:#FFFFFF;--text:#1A1A2E;--text2:#4A4A6A;--muted:#8888AA;--pri:#6C5CE7;--pri2:#A29BFE;--acc:#00B894;--acc2:#55EFC4;--orange:#FDCB6E;--pink:#FD79A8;--blue:#74B9FF;--border:rgba(0,0,0,0.06);--shadow:0 4px 24px rgba(108,92,231,0.08);--radius:20px;--fh:'Poppins','Zen Maru Gothic',sans-serif;--fb:'Zen Maru Gothic',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.8;font-size:16px}a{color:var(--pri);text-decoration:none}
+.header{position:sticky;top:0;z-index:100;background:rgba(255,252,247,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 28px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--fh);font-weight:800;font-size:1.4rem;color:var(--text)}
+.logo-mark{width:44px;height:44px;background:linear-gradient(135deg,var(--pri),var(--pink),var(--orange));border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;font-weight:900;box-shadow:0 4px 16px rgba(108,92,231,0.3)}
+.nav{display:flex;gap:6px}.nav a{padding:8px 18px;border-radius:100px;color:var(--text2);font-size:.88rem;font-weight:500;transition:all .2s}.nav a:hover{background:var(--pri);color:#fff}
+.breadcrumb{max-width:800px;margin:0 auto;padding:20px 28px 0;font-size:.82rem;color:var(--muted)}
+.breadcrumb a{color:var(--pri)}
+.article{max-width:800px;margin:0 auto;padding:0 28px 80px}
+.article-header{padding:32px 0;border-bottom:1px solid var(--border);margin-bottom:36px}
+.article-badge{display:inline-block;padding:4px 16px;border-radius:100px;font-size:.78rem;font-weight:700;color:#fff;margin-bottom:16px}
+.article-title{font-family:var(--fh);font-size:2rem;font-weight:900;line-height:1.4;margin-bottom:16px;background:linear-gradient(135deg,var(--text),var(--pri));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.article-meta{display:flex;gap:20px;font-size:.82rem;color:var(--muted)}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 32px;margin-bottom:36px;box-shadow:var(--shadow)}
+.toc h2{font-family:var(--fh);font-size:1.1rem;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.toc ol{padding-left:20px}.toc li{margin-bottom:8px;font-size:.92rem}.toc a{color:var(--text2);transition:color .2s}.toc a:hover{color:var(--pri)}
+.article h2{font-family:var(--fh);font-size:1.5rem;font-weight:900;margin:48px 0 20px;padding-bottom:12px;border-bottom:3px solid var(--pri);background:linear-gradient(135deg,var(--text),var(--pri));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.article h3{font-family:var(--fh);font-size:1.15rem;font-weight:800;margin:32px 0 14px;padding-left:14px;border-left:4px solid var(--pink)}
+.article p{margin-bottom:18px;line-height:2;color:var(--text2)}
+.article ul,.article ol{margin:0 0 20px 24px;color:var(--text2)}.article li{margin-bottom:8px;line-height:1.8}
+.highlight-box{background:linear-gradient(135deg,rgba(108,92,231,0.05),rgba(253,121,168,0.05));border:1px solid rgba(108,92,231,0.15);border-radius:16px;padding:24px 28px;margin:24px 0}
+.highlight-box h4{font-family:var(--fh);font-weight:800;font-size:1rem;margin-bottom:10px;color:var(--pri)}
+.point-box{background:var(--card);border:2px solid var(--acc);border-radius:16px;padding:24px 28px;margin:24px 0}
+.point-box h4{font-weight:800;margin-bottom:10px;color:var(--acc)}
+.warn-box{background:#FFF5F5;border:2px solid var(--pink);border-radius:16px;padding:24px 28px;margin:24px 0}
+.warn-box h4{font-weight:800;margin-bottom:10px;color:var(--pink)}
+table{width:100%;border-collapse:collapse;margin:24px 0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+th{background:var(--pri);color:#fff;padding:14px 18px;text-align:left;font-weight:700;font-size:.88rem}
+td{padding:12px 18px;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--text2)}
+tr:nth-child(even) td{background:rgba(108,92,231,0.02)}
+.ad-inline{background:var(--card);border:2px dashed var(--border);border-radius:16px;padding:28px;text-align:center;color:var(--muted);font-size:.82rem;margin:36px 0}
+.author-box{display:flex;gap:20px;align-items:center;background:var(--card);border-radius:var(--radius);padding:28px;border:1px solid var(--border);box-shadow:var(--shadow);margin:48px 0}
+.author-avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--pri),var(--acc));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.6rem;font-weight:900;font-family:var(--fh);flex-shrink:0}
+.author-info h4{font-family:var(--fh);font-weight:800;margin-bottom:4px}.author-info p{font-size:.85rem;color:var(--text2);margin:0}
+.related{margin-top:48px}.related h2{font-family:var(--fh);font-size:1.3rem;font-weight:900;margin-bottom:24px;display:flex;align-items:center;gap:8px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.related-card{background:var(--card);border-radius:16px;padding:20px;border:1px solid var(--border);box-shadow:var(--shadow);transition:all .3s}
+.related-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(108,92,231,0.12)}
+.related-card h4{font-family:var(--fh);font-weight:800;font-size:.9rem;line-height:1.5;margin-bottom:8px}
+.related-card span{font-size:.75rem;color:var(--muted)}
+.footer{background:var(--text);color:rgba(255,255,255,0.7);padding:36px 28px 24px;margin-top:48px;text-align:center;font-size:.82rem}
+.footer a{color:rgba(255,255,255,0.6)}
+@media(max-width:640px){.article-title{font-size:1.5rem}.nav{display:none}.related-grid{grid-template-columns:1fr}.author-box{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<header class="header"><div class="header-inner"><a href="/" class="logo"><div class="logo-mark">AI</div><span>AI副業ハック</span></a><nav class="nav"><a href="/#articles">記事一覧</a><a href="/#roadmap">ロードマップ</a><a href="/about.html">運営者</a><a href="/contact.html">お問い合わせ</a></nav></div></header>
+<div class="breadcrumb"><a href="/">ホーム</a> &gt; <a href="/#articles">記事一覧</a> &gt; AIで本業を時短して副業時間を作る｜自動化ワークフロー構築ガ...</div>
+<article class="article">
+  <div class="article-header">
+    <span class="article-badge" style="background:#74B9FF">⚡ 効率化</span>
+    <h1 class="article-title">AIで本業を時短して副業時間を作る｜自動化ワークフロー構築ガイド</h1>
+    <div class="article-meta"><span>📅 2026年1月28日</span><span>⏱ 10分で読める</span><span>✏️ わたる</span></div>
+  </div>
+  <nav class="toc"><h2>📋 目次</h2><ol><li><a href="#s1">なぜ時短が最重要か</a></li>
+<li><a href="#s2">自動化できる業務リスト</a></li>
+<li><a href="#s3">Zapier×AIの連携方法</a></li>
+<li><a href="#s4">具体的なワークフロー例</a></li>
+<li><a href="#s5">週10時間を生み出す計画</a></li>
+<li><a href="#s6">まとめ</a></li></ol></nav>
+  
+<h2 id="s1">なぜ時短が最重要か</h2>
+<p>副業で成果を出すために最も重要なのは「スキル」でも「才能」でもなく、<strong>時間の確保</strong>です。フルタイムで働きながら副業するには、本業の効率化で時間を生み出す必要があります。</p>
+<p>AI活用による業務自動化で、1日1〜2時間の副業時間を捻出することが第一歩です。</p>
+
+<h2 id="s2">自動化できる業務リスト</h2>
+<table>
+<tr><th>業務</th><th>AIツール</th><th>時短効果</th></tr>
+<tr><td>メール返信</td><td>ChatGPT / Claude</td><td>60%削減</td></tr>
+<tr><td>議事録作成</td><td>Claude + 音声入力</td><td>80%削減</td></tr>
+<tr><td>データ集計</td><td>ChatGPT Code Interpreter</td><td>70%削減</td></tr>
+<tr><td>資料作成</td><td>Claude + Canva</td><td>50%削減</td></tr>
+<tr><td>リサーチ</td><td>ChatGPT Web検索</td><td>70%削減</td></tr>
+</table>
+<p>これらを組み合わせるだけで、1日あたり1〜3時間の業務時間を削減できます。</p>
+
+<div class="ad-inline">📢 広告スペース</div>
+
+<h2 id="s3">Zapier×AIの連携方法</h2>
+<p>Zapier（ザピアー）は、異なるWebサービスを自動連携させるノーコードツールです。2026年版ではAI機能が大幅に強化され、ChatGPTやClaudeとのネイティブ連携が可能になりました。</p>
+<h3>基本的な設定方法</h3>
+<p>1. Zapierアカウント作成（無料プランあり）<br>2. トリガーを設定（例：メールが届いたら）<br>3. AIアクションを設定（例：ChatGPTで返信文を生成）<br>4. 出力アクションを設定（例：Gmailで自動返信）</p>
+
+<h2 id="s4">具体的なワークフロー例</h2>
+<h3>ワークフロー1：メール自動分類＆下書き</h3>
+<p>Gmail受信 → ChatGPTでカテゴリ分類 → 重要度判定 → 返信下書き自動生成。毎朝のメール処理が30分から5分に短縮されます。</p>
+<h3>ワークフロー2：日報自動作成</h3>
+<p>Googleカレンダーの予定 + Slackのメッセージ → Claudeが日報を自動生成 → 上司にメール送信。</p>
+<h3>ワークフロー3：情報収集の自動化</h3>
+<p>RSSフィード + Google Alert → ChatGPTで要約 → Notionに自動保存。業界ニュースのキャッチアップが自動化されます。</p>
+<div class="point-box"><h4>✅ 自動化のコツ</h4><p>いきなり全てを自動化しようとせず、「最も時間がかかっている作業」から1つずつ自動化していくのが成功のコツです。小さな成功体験を積み重ねましょう。</p></div>
+
+<h2 id="s5">週10時間を生み出す計画</h2>
+<h3>Week 1-2：現状分析</h3>
+<p>1週間の業務を記録し、自動化可能なタスクを特定。</p>
+<h3>Week 3-4：最初の自動化</h3>
+<p>最も効果の大きいタスクの自動化を実装。メール処理がおすすめ。</p>
+<h3>Week 5-8：段階的に拡大</h3>
+<p>2つ目、3つ目のワークフローを追加。目標の週10時間を達成。</p>
+<p>週10時間あれば、月40時間。これだけあれば十分な副業活動が可能です。</p>
+
+<h2 id="s6">まとめ</h2>
+<p>AI×自動化で本業を効率化し、副業時間を作ることが、AI副業成功の第一歩です。まずは1つのワークフローから始めて、徐々に自動化の範囲を広げていきましょう。浮いた時間で副業に取り組めば、人生が大きく変わります。</p>
+
+  <div class="ad-inline">📢 広告スペース</div>
+  <div class="author-box">
+    <div class="author-avatar">W</div>
+    <div class="author-info"><h4>わたる</h4><p>AI副業実践者｜社会保険労務士10年目。AIを活用した副業で「才能じゃなく仕組みで稼ぐ」方法を実践・発信中。</p></div>
+  </div>
+  <div class="related"><h2>📖 関連記事</h2><div class="related-grid"><a href="/posts/ai-side-business-2026.html" class="related-card"><h4>AI副業の始め方完全ガイド</h4><span>2026.02.28</span></a>
+<a href="/posts/chatgpt-vs-claude-2026.html" class="related-card"><h4>ChatGPT vs Claude比較</h4><span>2026.02.25</span></a>
+<a href="/posts/ai-agent-business.html" class="related-card"><h4>AIエージェント副業が熱い</h4><span>2026.02.22</span></a>
+<a href="/posts/claude-code-tool-2026.html" class="related-card"><h4>Claude Codeでツール開発</h4><span>2026.02.12</span></a></div></div>
+</article>
+<footer class="footer"><a href="/">AI副業ハック</a> | <a href="/about.html">運営者</a> | <a href="/privacy.html">プライバシー</a> | <a href="/disclaimer.html">免責事項</a><br>© 2026 AI副業ハック All Rights Reserved.</footer>
+</body>
+</html>

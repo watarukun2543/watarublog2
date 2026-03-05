@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
 
-Sitemap: https://watarublog2.vercel.app/sitemap.xml
+Sitemap: https://ai-fukugyou-hack.vercel.app/sitemap.xml
